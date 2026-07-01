@@ -215,7 +215,7 @@ body {
     position: absolute;
     bottom: 35%;
     right: 5%;
-
+    z-index: 2;
 }
 
 .contact-me {
@@ -245,11 +245,7 @@ body {
     position: absolute;
     left: 63%;
     top: 90%;
-}
-
-.page-content-resume {
-    position: relative;
-    height: 100%;
+    z-index: 1;
 }
 
 #resume {
@@ -259,31 +255,119 @@ body {
     background-color: #6e865b;
 }
 
-.timeline {
-    color: #f09ba6;
+.page-content-resume {
+    position: relative;
+    height: 100%;
+    background-color: #6e865b;
 }
 
-.education-heading {
-    font-family: 'Bebas Neue', sans-serif;
+.resume-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.resume-left {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-left: 10px;
+}
+
+.resume-right {
+    width: 35%;
+    position: relative;
+}
+
+.timeline {
     color: #f09ba6;
-    font-size: 2rem;
 }
 
 .item {
     display: flex;
     gap: 40px;
     align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.year {
+    min-width: 120px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.desc {
+    margin: 0;
 }
 
 .item a {
     color: #f09ba6;
 }
 
-.year {
-    min-width: 120px; /* keeps all years aligned */
-    font-weight: bold;
+.education-heading {
+    font-size: 3rem;
+    color: #eee6d3;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
-.desc {
-    margin: 0;
+.experience {
+    height: 500px;
+    background-color: #eee6d3;
+}
+
+.education,
+.experience {
+    padding: 30px;
+}
+
+.experience-heading {
+    font-size: 3rem;
+    color: #6e865b;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.ex-timeline {
+    color: #6e865b;
+}
+
+.tags {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin-top: 150px;
+}
+
+.tag {
+    height: 20px;
+    width: fit-content;
+    padding: 10px 70px;
+    background-color: #2d2d2d;
+    color: #eee6d3;
+    border-radius: 50px;
+}
+
+.skill-heading {
+    font-size: 3rem;
+    color: #f09ba6;
+    position: absolute;
+    right: 50%;
+    z-index: 5;
+    margin-top: 170px;
+    font-family: 'Bebas Neue', sans-serif;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+#aboutMe {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f09ba6;
 }
