@@ -6,44 +6,55 @@
     <title>Rojin Rahimi Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-    <header>
-    </header>
-
     <main>
+        <!-- HERO SECTION -->
         <section id="hero">
 
+            <!-- NAVIGATION BAR -->
             <nav class="page-nav hero-nav">
                 <ul>
-                    <li><a href="#hero">Hero</a></li>
+                    <li><a href="#hero">Home</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#resume">Resume</a></li>
                     <li><a href="#aboutMe">About Me</a></li>
                 </ul>
             </nav>
 
+            <span class="star">✦ <span class="name">Rojin Rahimi</span></span>
+
             <div class="page-content-hero">
-                <img src="images/IMG_1033-nobg.png"/>
-                <h1 class="filled">ROJIN RAHIMI</h1>
-                <h2 class="hollow">ROJIN RAHIMI</h2>
-                <h2 class="hollow">ROJIN RAHIMI</h2>
-                <h2 class="hollow">ROJIN RAHIMI</h2>
-                <p class="interests">
-                    I love design and anything related to art.
-                    I try to find the most practical solutions that
-                    best affects both myself and people I work with.
-                </p>
+                <img class="hero-image" src="images/IMG_1033-nobg.png"/>
+
+                <h1 class="filled">PORTFOLIO</h1>
+                <h2 class="hollow">PORTFOLIO</h2>
+                <h2 class="hollow">PORTFOLIO</h2>
+                <h2 class="hollow">PORTFOLIO</h2>
+
                 <div class="job-title">
                     <p>Front-end Developer <br><br>
                         Digital Marketer <br><br>
                         Former Android Developer
                     </p>
                 </div>
+
+                <!-- DECORATIVE STARS -->
+                <div>
+                    <span class="star--1">✦</span>
+                    <span class="star--2">✦</span>
+                    <span class="star--3">✦</span>
+                    <span class="star--4">✦</span>
+                </div>
+
             </div>
 
+            <!-- SCROLL CIRCLE -->
             <div class="circle">
                 <p class="scroll-text">Scroll<br>
                 Down</p>
@@ -51,11 +62,12 @@
 
         </section>
 
+        <!-- CONTACT SECTION -->
         <section id="contact">
             
             <nav class="page-nav contact-nav">
                 <ul>
-                    <li><a href="#hero">Hero</a></li>
+                    <li><a href="#hero">Home</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#resume">Resume</a></li>
                     <li><a href="#aboutMe">About Me</a></li>
@@ -144,11 +156,37 @@
 
             </div>
             <div class="resume-right">
-                <div class="skill">
                     <h3 class="skill-heading">Technical skills</h3>
-
-                    <div></div>
-                    <div></div>
+                    <div class="skill">
+                        
+                        <div class="coding">
+                            <h4 class="coding-heading">Coding skills</h4>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>React</li>
+                                <li>Tailwind</li>
+                            </ul>
+                        </div>
+                        <div class="general">
+                            <h4 class="general-heading">General skills</h4>
+                            <ul>
+                                <li>Java</li>
+                                <li>Kotlin</li>
+                                <li>Git</li>
+                                <li>VSCode</li>
+                                <li>Android Studio</li>
+                                <li>Figma</li>
+                            </ul>
+                        </div>
+                        <div class="tags-act">
+                        <p class="tag">Digital Marketing</p>
+                        <p class="tag">Android Dev</p>
+                        <p class="tag">Front-end</p>
+                        <p class="tag">Design enthiusiast</p>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -156,7 +194,62 @@
     </div>
 </section>
         <section id="aboutMe">
-            <div class="page-content-aboutMe"></div>
+            <div class="page-content-aboutme">
+
+                <div class="aboutme-left">
+                    <div class="activity">
+                        <h3 class="activity-heading">Activities</h3>
+                        <div class="timeline-act">
+                            <div class="item-act">
+                                <p class="year-act">2020</p>
+                                <p class="desc-act">CS50 Course</p>
+                            </div>
+                            <div class="item-act">
+                                <p class="year-act">2022</p>
+                                <p class="desc-act">Concordia Admission</p>
+                            </div>
+                            <div class="item-act">
+                                <p class="year-act">2022</p>
+                                <p class="desc-act">Android Developer</p>
+                            </div>
+                            <div class="item-act">
+                                <p class="year-act">2025</p>
+                                <p class="desc-act">Padua Admission</p>
+                            </div>
+                            <div class="item-act">
+                                <p class="year-act">2026</p>
+                                <p class="desc-act">FreeCodeCamp Front-end Development Course<br>
+                                Google Digital Marketing Course
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aboutme-right">
+                    <h3 class="language-heading">Languages</h3>
+                    <div class="languages">
+                        <div class="english">
+                            <h4>English</h4>
+                            <p>Fluent - C2</p>
+                        </div>
+                        <div class="italian">
+                            <h4>Italian</h4>
+                            <p>B1</p>
+                        </div>
+                        <div class="persian">
+                            <h4>Persian</h4>
+                            <p>Native</p>
+                        </div>
+                    </div>
+                    <h3 class="project-heading">Projects</h3>
+                    <div class="projects">
+                        <a>Portfolio</a>
+                        <a>Weather App</a>
+                        <a>Calculator</a>
+                    </div>
+                </div>
+
+            </div>
         </section>
     </main>
 
