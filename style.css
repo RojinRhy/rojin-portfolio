@@ -633,7 +633,6 @@ body {
     font-size: clamp(2rem, 4vw, 3rem);
     color: #dba1a2;
     z-index: 4;
-    font-family: 'Bebas Neue', sans-serif;
     white-space: nowrap;
     margin-top: clamp(60px, 14vw, 170px);
 }
@@ -682,134 +681,246 @@ body {
     margin-top: clamp(24px, 5vw, 50px);
 }
 
+/* ---------- MOBILE OVERRIDE ---------- */
+@media (max-width: 700px) {
+    #resume {
+        height: auto;
+        min-height: 100vh;
+        padding: 90px 0 40px;
+    }
+ 
+    .resume-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 0 20px;
+        text-align: center;
+    }
+ 
+    .resume-left,
+    .resume-right {
+        width: 100%;
+        align-items: center;
+    }
+ 
+    .skill-heading {
+        margin-top: 0;
+    }
+ 
+    .item {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+ 
+    .year {
+        justify-content: center;
+    }
+ 
+    .tags,
+    .tags-act {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+ 
+    .skill {
+        justify-content: center;
+    }
+ 
+    .skills {
+        justify-content: center;
+    }
+
+    .experience {
+        justify-content: center;
+    }
+}
 
 
-/* ---------- ABOUT ME SECTION ---------- */
+
+/* ================================================
+   ABOUT ME SECTION
+   ================================================ */
 #aboutMe {
     height: 100vh;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     background-color: #dba1a2;
 }
-
+ 
 .page-content-aboutme {
     display: flex;
     position: relative;
     height: 100%;
     background-color: #dba1a2;
+    justify-content: space-between;
+    gap: clamp(40px, 8vw, 120px);
+    padding: 0 clamp(24px, 5vw, 60px);
 }
 
 .aboutme-left {
-    width: 35%;
+    width: 30%;
     display: flex;
     flex-direction: column;
-    margin-left: 50px;
-    margin-top: calc(350px + 50px);
+    margin-top: clamp(300px, 70vh, 650px);
+    flex-shrink: 0;
 }
-
-.aboutme-right {
-    width: 35%;
-    position: relative;
-    margin-left: 250px;
-}
-
-
-/* ---------- LANGUAGES ---------- */
+ 
 .language-heading {
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     color: #6e865b;
-    font-family: 'Bebas Neue', sans-serif;
-    margin-top: 90px;
+    margin: 0 0 clamp(24px, 5vw, 40px) 0;
 }
-
+ 
 .languages {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     color: #6e865b;
     gap: 20px;
 }
-
+ 
 .lang-level {
     list-style: none;
     color: #6e865b;
 }
-
-
-/* ---------- ACTIVITIES ---------- */
+ 
+/* ---------- RIGHT: ACTIVITIES + PROJECTS ---------- */
+.aboutme-right {
+    width: 40%;
+    position: relative;
+    margin-top: clamp(40px, 8vh, 90px);
+    margin-right: clamp(40px, 8vh, 90px);
+    flex-shrink: 0;
+}
+ 
 .activity-heading {
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     color: #6e865b;
     font-family: 'Bebas Neue', sans-serif;
-    margin: 50px 0;
+    margin: 0 0 clamp(24px, 5vw, 50px) 0;
 }
-
+ 
 .timeline-act {
     color: #6e865b;
 }
-
+ 
 .item-act {
     display: flex;
-    gap: 40px;
+    gap: clamp(16px, 3vw, 40px);
     align-items: baseline;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
-
+ 
 .year-act {
     min-width: 120px;
     font-weight: bold;
     margin: 0;
 }
-
+ 
 .desc-act {
     list-style: none;
     color: #6e865b;
 }
-
-/* ---------- PROJECTS ---------- */
+ 
 .project-heading {
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     color: #6e865b;
     font-family: 'Bebas Neue', sans-serif;
-    margin-top: 90px;
+    margin-top: clamp(40px, 8vh, 90px);
 }
-
+ 
 .projects {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     color: #6e865b;
-    gap: 50px;
+    gap: clamp(20px, 4vw, 50px);
 }
-
+ 
 .project {
     list-style: none;
     color: #6e865b;
 }
-
+ 
 /* ---------- DECORATIVES ---------- */
 .year-star-act {
-    color: #eee6d3; 
+    color: #eee6d3;
     font-size: 1rem;
 }
-
+ 
 .project-icon {
     width: 25px;
     height: 25px;
 }
 
+.aboutme-star {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+ 
 .aboutme-star--1 {
     position: absolute;
     right: 10%;
     bottom: 40%;
     color: #eee6d3;
-    font-size: 60px;
+    font-size: clamp(28px, 5vw, 60px);
     z-index: 3;
 }
-
+ 
 .aboutme-star--2 {
     position: absolute;
     right: 15%;
     bottom: 35%;
     color: #eee6d3;
-    font-size: 30px;
+    font-size: clamp(14px, 2.5vw, 30px);
     z-index: 3;
+}
+
+/* ---------- MOBILE OVERRIDE ---------- */
+@media (max-width: 700px) {
+    #aboutMe {
+        height: auto;
+        min-height: 100vh;
+    }
+ 
+    .page-content-aboutme {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+        padding: 60px 20px 60px;
+    }
+ 
+    .aboutme-left,
+    .aboutme-right {
+        width: 100%;
+        margin-top: 0;
+        align-items: center;
+    }
+ 
+    .languages {
+        justify-content: center;
+        gap: 30px;
+    }
+ 
+    .item-act {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+ 
+    .projects {
+        justify-content: center;
+    }
+ 
+    .project-heading {
+        margin-top: 0;
+    }
+    
+    .aboutme-star--1,
+    .aboutme-star--2 {
+        display: none;
+    }
 }
