@@ -1,48 +1,23 @@
 * {
     box-sizing: border-box;
 }
-
+ 
 html {
     scroll-behavior: smooth;
 }
-
+ 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
-/* ---------- SCALING ---------- */
-.page-content-hero {
-    position: relative;
-    height: 100%;
-    overflow: hidden;
-}
-
-@media (max-width: 1200px) {
-    .page-content-hero {
-        transform: scale(0.85);
-    }
-}
-@media (max-width: 1000px) {
-    .page-content-hero {
-        transform: scale(0.65);
-    }
-}
-@media (max-width: 700px) {
-    .page-content-hero {
-        transform: scale(0.45);
-    }
-}
-@media (max-width: 450px) {
-    .page-content-hero {
-        transform: scale(0.32);
-    }
-}
-
-/* ---------- HERO SECTION ---------- */
+ 
+/* ================================================
+   HERO SECTION
+   ================================================ */
 #hero {
     position: relative;
     height: 100vh;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,53 +30,58 @@ body {
     );
     color: #dba1a2;
 }
-
+ 
+.page-content-hero {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+ 
 /* ---------- NAV BAR ---------- */
 .hero-nav {
     width: 100%;
     background-color: #6e865b;
-    margin-bottom: 0;
 }
-
+ 
 .page-nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
-    justify-content: flex-start;
-    margin-bottom: 70px;
-    flex-direction: row-reverse;
-    margin: 20px 20px 60px 0;
+    justify-content: flex-end;
+    margin: 20px 20px 20px 0;
     padding: 0;
 }
-
+ 
 .hero-nav a {
     color: #dba1a2;
     text-decoration: none;
 }
-
+ 
 .name {
     color: #dba1a2;
     width: fit-content;
 }
-
+ 
 /* ---------- TYPOGRAPHY STACK ---------- */
 .filled {
-    margin: -0.5rem;
-    font-size: clamp(4rem, 7rem, 7rem);
+    margin: 0;
+    font-size: clamp(2.5rem, 9vw, 7rem);
     letter-spacing: 3px;
     padding: 10px;
     font-weight: normal;
     font-family: 'Monoton', sans-serif;
     position: absolute;
     left: 50%;
-    top: -5%;
+    top: -2%;
     transform: translateX(-50%);
     z-index: 3;
+    white-space: nowrap;
 }
-
+ 
 .hollow {
-    margin: -0.5rem;
-    font-size: clamp(4.5rem, 8rem, 8rem);
+    margin: 0;
+    font-size: clamp(2.8rem, 10vw, 8rem);
     letter-spacing: 3px;
     padding: 10px;
     font-family: 'Bebas Neue', sans-serif;
@@ -109,85 +89,70 @@ body {
     -webkit-text-stroke: 2px #dba1a2;
     position: absolute;
     left: 50%;
-    top: -5%;
     transform: translateX(-50%);
     z-index: 1;
+    white-space: nowrap;
 }
-
+ 
 .hollow:nth-of-type(1) { top: 17%; }
 .hollow:nth-of-type(2) { top: 40%; }
 .hollow:nth-of-type(3) { top: 63%; }
-
+ 
 /* ---------- PORTRAIT IMAGE ---------- */
 .hero-image {
     position: absolute;
     left: 30%;
-    top: 30%;
+    top: 40%;
     transform: translate(-50%, -50%);
-    width: 450px;
+    width: clamp(160px, 32vw, 450px);
+    height: auto;
     z-index: 2;
 }
-
+ 
 /* ---------- JOB TITLE ---------- */
 .job-title {
     position: absolute;
     left: 60%;
     top: 30%;
-    width: 250px;
-    height: 200px;
+    width: clamp(160px, 22vw, 250px);
+    height: clamp(130px, 18vw, 200px);
     background-color: #6e865b;
     z-index: 4;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
-
+ 
+.job-title p {
+    font-size: clamp(0.7rem, 1.4vw, 1rem);
+    text-align: center;
+}
+ 
 /* ---------- DECORATIVE STARS ---------- */
 .star {
     position: absolute;
-    top: 20px;      
-    left: 20px;    
-    margin: 0;      
+    top: 20px;
+    left: 20px;
+    margin: 0;
     color: #e4b109;
     font-weight: bold;
+    font-size: clamp(0.9rem, 1.6vw, 1.2rem);
 }
-
-.star--1 {
+ 
+.star--1, .star--2, .star--3, .star--4 {
     position: absolute;
-    left: 20%;
-    top: 20%;
     color: #e4b109;
-    font-size: 60px;
 }
-
-.star--2 {
-    position: absolute;
-    left: 19%;
-    top: 30%;
-    color: #e4b109;
-    font-size: 40px;
-}
-
-.star--3 {
-    position: absolute;
-    right: 19%;
-    bottom: 40%;
-    color: #e4b109;
-    font-size: 25px;
-}
-
-.star--4 {
-    position: absolute;
-    right: 20%;
-    bottom: 30%;
-    color: #e4b109;
-    font-size: 70px;
-}
-
+.star--1 { left: 20%; top: 20%; font-size: clamp(24px, 5vw, 60px); }
+.star--2 { left: 19%; top: 30%; font-size: clamp(16px, 3.4vw, 40px); }
+.star--3 { right: 19%; bottom: 40%; font-size: clamp(12px, 2vw, 25px); }
+.star--4 { right: 20%; bottom: 30%; font-size: clamp(28px, 5.8vw, 70px); }
+ 
 /* ---------- SCROLL CIRCLE ---------- */
 .circle {
-    width: 120px;
-    height: 120px;
+    width: clamp(80px, 10vw, 120px);
+    height: clamp(80px, 10vw, 120px);
     border-radius: 50%;
     background-color: #eee6d3;
     position: absolute;
@@ -200,74 +165,165 @@ body {
     text-align: center;
     z-index: 1;
 }
-
+ 
 .scroll-text {
     color: #6e865b;
-    font-size: 1.2rem;
+    font-size: clamp(0.8rem, 1.4vw, 1.2rem);
     line-height: 1.3;
     font-weight: bold;
 }
 
-/* ---------- CONTACT SECTION ---------- */
+/* ---------- MOBILE OVERRIDE FOR SCREEN SIZES < 700px ---------- */
+@media (max-width: 700px) {
+    /* Let the section grow to fit its stacked content instead of forcing
+       a fixed 100vh — that fixed height was squishing the circle into an
+       oval and pushing overflow into the Contact section below. */
+    #hero {
+        height: auto;
+        min-height: 0;
+        justify-content: flex-start;
+        padding-bottom: 24px;
+    }
+ 
+    .page-content-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 24px 20px 0;
+        height: auto;
+    }
+ 
+    .hero-image,
+    .job-title,
+    .filled,
+    .hollow {
+        position: static;
+        transform: none;
+        left: auto;
+        top: auto;
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+ 
+    .filled {
+        font-size: clamp(2.2rem, 12vw, 3.5rem);
+        line-height: 1;
+        order: 1;
+    }
+ 
+    .hollow:nth-of-type(1),
+    .hollow:nth-of-type(2),
+    .hollow:nth-of-type(3) {
+        display: block;
+        font-size: clamp(1.6rem, 9vw, 2.6rem);
+        line-height: 1;
+        opacity: 0.6;
+        order: 2;
+    }
+ 
+    .hero-image {
+        width: min(220px, 60vw);
+        flex-shrink: 0;
+        order: 3;
+    }
+ 
+    .job-title {
+        width: auto;
+        height: auto;
+        order: 4;
+    }
+ 
+    /* Turned the corner-star cluster into a small centered flourish. */
+    .stars {
+        position: static;
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        order: 5;
+    }
+    .star--1, .star--2, .star--3, .star--4 {
+        position: static;
+        font-size: 1.3rem;
+    }
+ 
+    .circle {
+        position: static;
+        transform: none;
+        flex-shrink: 0;
+        margin: 10px auto 0;
+        order: 6;
+    }
+}
+
+
+
+/* ================================================
+   CONTACT SECTION
+   ================================================ */
+#contact {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: #dba1a2;
+}
+ 
 .contact-nav {
     background-color: #dba1a2;
     color: #6e865b;
-    margin-right: 20px;
-    margin-bottom: 0;
 }
-
+ 
 .contact-nav a {
     color: #6e865b;
     text-decoration: none;
 }
-
+ 
 .star-contact {
     position: absolute;
-    top: 20px;      
-    left: 20px;    
-    margin: 0;      
-    color: #e4b109;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+    color: #eee6d3;
     font-weight: bold;
+    font-size: clamp(0.9rem, 1.6vw, 1.2rem);
 }
-
+ 
 .name-contact {
-    color: #6e865b; 
+    color: #6e865b;
 }
-
+ 
 .page-content-contact {
     position: relative;
     height: 100%;
     background-color: #dba1a2;
     flex: 1;
     display: flex;
-    align-items: center;  
+    align-items: center;
+    justify-content: space-around;
+    gap: clamp(20px, 5vw, 80px);
+    padding: 0 clamp(24px, 6vw, 100px);
 }
-
-#contact {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #dba1a2;
-}
-
+ 
+/* ---------- LEFT FLEX ---------- */
 .contact-left {
     display: flex;
     flex-direction: column;
-    justify-content: center;  
+    justify-content: center;
     gap: 24px;
-    max-width: 500px;
-    align-self: stretch; 
-    margin-left: 300px;
+    max-width: 480px;
+    flex: 1 1 320px;
 }
-
+ 
 .introduction {
     color: #6e865b;
-    font-size: clamp(3rem, 5rem, 5rem);
+    font-size: clamp(2.2rem, 6vw, 5rem);
     font-family: 'Bebas Neue', sans-serif;
     margin: 0;
 }
-
+ 
 .about-me {
     color: #6e865b;
     font-size: 1rem;
@@ -275,7 +331,7 @@ body {
     margin: 0;
     max-width: 320px;
 }
-
+ 
 .oval {
     width: fit-content;
     padding: 14px 32px;
@@ -285,24 +341,26 @@ body {
     justify-content: center;
     align-items: center;
 }
+ 
 #git-add {
     text-decoration: none;
     color: #dba1a2;
     font-weight: bold;
     white-space: nowrap;
 }
-
+ 
+/* ---------- RIGHT CONTACT FRAME ---------- */
 .frame {
-    width: 25%;
+    position: relative;
+    width: clamp(220px, 26vw, 340px);
     height: 80%;
     background-color: #6e865b;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 32px 20px;
-    margin-left: 320px;
-    transform: translateY(150px);
+    padding: clamp(16px, 2.5vw, 32px) 20px;
+    transform: translateY(clamp(60px, 11vw, 150px));
     background: linear-gradient(
         to bottom,
         #6e865b 0%,
@@ -311,54 +369,53 @@ body {
         #2d2d2d 100%
     );
     z-index: 3;
+    flex-shrink: 0;
 }
-
+ 
 .background-circle {
-    width: 240px;
-    height: 240px;
+    width: clamp(120px, 60%, 240px);
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     background-color: #dba1a2;
     position: absolute;
-    top: 10%;
-    right: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    top: 14%;
+    right: 20%;
     z-index: 2;
 }
-
-.frame img {
+ 
+.contact-image {
     position: absolute;
+    width: clamp(100px, 80%, 250px);
+    height: auto;
     bottom: 35%;
-    right: 13%;
+    right: 0%;
     z-index: 3;
 }
-
+ 
 .contact-me {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     text-align: start;
     align-self: flex-start;
-    top: 70%;
+    top: 68%;
     color: #eee6d3;
     gap: 10px;
 }
-
+ 
 .email, .phone-number, .location {
     text-decoration: none;
     color: #eee6d3;
-    margin: 0; 
+    margin: 0;
 }
-
+ 
 .contact-heading {
     height: fit-content;
-    font-size: 2rem;
+    font-size: clamp(1.4rem, 2.4vw, 2rem);
     font-family: 'Bebas Neue', sans-serif;
-    margin: 0; 
+    margin: 0;
 }
-
+ 
 /* ---------- DECORATIVES ---------- */
 .oval--2 {
     width: fit-content;
@@ -373,26 +430,30 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    white-space: nowrap;
 }
-
+ 
 .oval--3 {
-    width: 10%;
+    width: fit-content;
     padding: 14px 32px;
     background-color: #e4b109;
     color: #2d2d2d;
     border-radius: 50px;
     position: absolute;
-    right: 7%;
+    right: 10%;
     bottom: 20%;
     z-index: 4;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    white-space: nowrap;
 }
-
+ 
 .hollow-resume {
-    margin: -0.5rem;
-    font-size: 6.5rem;
+    margin: 0;
+    font-size: clamp(3rem, 8vw, 6.5rem);
     line-height: 0.9;
     font-family: 'Bebas Neue', sans-serif;
     color: transparent;
@@ -401,66 +462,116 @@ body {
     left: 63%;
     top: 90%;
     z-index: 1;
+    white-space: nowrap;
+}
+
+/* ---------- MOBILE OVERRIDE ---------- */
+@media (max-width: 700px) {
+    #contact {
+        height: auto;
+        min-height: 100vh;
+    }
+ 
+    .page-content-contact {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        gap: 32px;
+        padding: 90px 20px 60px;
+    }
+ 
+    .contact-left {
+        align-items: center;
+        max-width: 100%;
+    }
+ 
+    .about-me {
+        max-width: 100%;
+    }
+ 
+    .frame {
+        width: min(260px, 80vw);
+        height: auto;
+        min-height: 340px;
+        transform: none;
+    }
+
+    .oval--2,
+    .oval--3 {
+        position: static;
+        font-size: 0.85rem;
+        padding: 10px 20px;
+    }
+ 
+    .hollow-resume {
+        display: none;
+    }
 }
 
 
-/* ---------- RESUME SECTION ----------*/
+
+/* ================================================
+   RESUME SECTION
+   ================================================ */
 #resume {
     height: 100vh;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     background-color: #6e865b;
 }
-
+ 
 .page-content-resume {
     position: relative;
     height: 100%;
     background-color: #6e865b;
 }
-
+ 
 .resume-layout {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    gap: clamp(20px, 4vw, 60px);
+    padding: 0 clamp(10px, 2vw, 20px);
 }
-
+ 
 .resume-left {
     width: 45%;
     display: flex;
     flex-direction: column;
     gap: 50px;
-    margin-left: 10px;
 }
-
+ 
 .resume-right {
     width: 45%;
     position: relative;
 }
-
-/* ---------- EDUCATION SEGMENT ---------- */
+ 
+/* ---------- EDUCATION ---------- */
 .education-heading {
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     color: #dba1a2;
     font-family: 'Bebas Neue', sans-serif;
-    margin: 50px 0;
+    margin: clamp(24px, 5vw, 50px) 0;
 }
-
+ 
 .timeline, .item a {
     color: #dba1a2;
 }
-
+ 
 .item {
     display: flex;
-    gap: 40px;
+    gap: clamp(16px, 3vw, 40px);
     align-items: baseline;
     margin-bottom: 20px;
 }
-
+ 
 .year-star {
-    color: #e4b109; 
+    color: #e4b109;
     font-size: 1rem;
 }
-
+ 
 .year {
     min-width: 120px;
     font-weight: bold;
@@ -469,14 +580,13 @@ body {
     align-items: center;
     gap: 8px;
 }
-
+ 
 .education,
 .experience {
-    padding: 30px;
+    padding: clamp(16px, 3vw, 30px);
 }
-
-
-/* ---------- EXPERIENCE SEGMENT ---------- */
+ 
+/* ---------- EXPERIENCE ---------- */
 .experience {
     position: relative;
     height: fit-content;
@@ -484,60 +594,58 @@ body {
     color: #6e865b;
     z-index: 2;
 }
-
+ 
 .experience-heading {
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     color: #6e865b;
     font-family: 'Bebas Neue', sans-serif;
-    margin: 50px 0;
+    margin: clamp(24px, 5vw, 50px) 0;
 }
-
+ 
 .tags {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    margin-top: 50px;
+    margin-top: clamp(24px, 5vw, 50px);
 }
-
+ 
 .tag {
-    min-width: 220px;
     display: flex;
-    justify-content: center;  
+    justify-content: center;
     align-items: center;
     width: fit-content;
     padding: 10px 30px;
     background-color: #2d2d2d;
     color: #eee6d3;
     border-radius: 50px;
+    white-space: nowrap;
 }
-
-
-/* ---------- SKILLS SEGMENT ---------- */
+ 
+/* ---------- SKILLS ---------- */
 .skill {
     display: grid;
     grid-template-columns: repeat(2, auto);
     color: #dba1a2;
-    margin-left: 0;
 }
 
 .skill-heading {
     position: relative;
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     color: #dba1a2;
     z-index: 4;
     font-family: 'Bebas Neue', sans-serif;
     white-space: nowrap;
-    margin-top: calc(150px + 20px);
+    margin-top: clamp(60px, 14vw, 170px);
 }
-
+ 
 .coding-heading,
 .general-heading {
     text-align: start;
     font-size: 1.2rem;
     font-weight: bold;
-    margin: 0 0 50px 0;
+    margin: 0 0 clamp(24px, 5vw, 50px) 0;
 }
-
+ 
 .skills {
     list-style-type: none;
     margin: 0;
@@ -546,18 +654,18 @@ body {
     grid-template-columns: repeat(2, auto);
     gap: 15px 10px;
 }
-
-/* ---------- ICONS ---------- */
+ 
 .skills li {
     display: flex;
     align-items: center;
 }
-
-.skill-icon, .general-icon {
+ 
+.skill-icon,
+.general-icon {
     display: inline-block;
     width: 28px;
     height: 28px;
-    background-color: #eee6d3;   
+    background-color: #eee6d3;
     -webkit-mask-size: contain;
     mask-size: contain;
     -webkit-mask-repeat: no-repeat;
@@ -565,14 +673,15 @@ body {
     -webkit-mask-position: center;
     mask-position: center;
 }
-
+ 
 .tags-act {
     display: grid;
     grid-column: 1 / -1;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    margin-top: 50px;
+    margin-top: clamp(24px, 5vw, 50px);
 }
+
 
 
 /* ---------- ABOUT ME SECTION ---------- */
