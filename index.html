@@ -20,11 +20,19 @@
             <!-- NAVIGATION BAR -->
             <nav class="page-nav hero-nav">
                 <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#aboutMe">About Me</a></li>
+                    <li><a href="#hero" data-i18n="nav-home">Home</a></li>
+                    <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+                    <li><a href="#resume" data-i18n="nav-resume">Resume</a></li>
+                    <li><a href="#aboutMe" data-i18n="nav-aboutme">About Me</a></li>
                 </ul>
+
+                <!-- LANGUAGE TOGGLE -->
+    <div class="lang-toggle-wrapper">
+        <button type="button" id="langToggle" class="lang-toggle" role="switch" aria-checked="false" aria-label="Switch to Persian">
+            <span class="lang-toggle-circle"></span>
+        </button>
+
+    </div>
             </nav>
 
             <span class="star">✦ <span class="name">Rojin Rahimi</span></span>
@@ -38,7 +46,7 @@
                 <h2 class="hollow" aria-hidden="true">PORTFOLIO</h2>
 
                 <div class="job-title">
-                    <p>Front-end Developer <br><br>
+                    <p data-i18n="job-title">Front-end Developer <br><br>
                         Digital Marketer <br><br>
                         Former Android Developer
                     </p>
@@ -56,7 +64,7 @@
 
             <!-- SCROLL CIRCLE -->
             <div class="circle">
-                <p class="scroll-text">Scroll<br>
+                <p class="scroll-text" data-i18n="scroll-text">Scroll<br>
                 Down</p>
             </div>
 
@@ -68,10 +76,10 @@
             <!-- NAVIGATION BAR -->
             <nav class="page-nav contact-nav">
                 <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#aboutMe">About Me</a></li>
+                    <li><a href="#hero" data-i18n="nav-home">Home</a></li>
+                    <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+                    <li><a href="#resume" data-i18n="nav-resume">Resume</a></li>
+                    <li><a href="#aboutMe" data-i18n="nav-aboutme">About Me</a></li>
                 </ul>
             </nav>
 
@@ -81,8 +89,8 @@
 
                 <!-- LEFT SIDE INFORMATION-->
                 <div class="contact-left">
-                    <h1 class="introduction">Hello,<br>I'm Rojin!</h1>
-                    <p class="about-me">I'm a front-end developer and digital marketer
+                    <h1 class="introduction" data-i18n="intro-heading">Hello,<br>I'm Rojin!</h1>
+                    <p class="about-me" data-i18n="about-me-text">I'm a front-end developer and digital marketer
                     who enjoys combining creativity and strategy.
                     I'm passionate about understanding people and 
                     designing digital experiences that are engaging for them.
@@ -97,7 +105,7 @@
                     <div class="background-circle"></div>
                     <img class="contact-image" src="images/image2-nobg.png" alt="Rojin Rahimi"/>
                     <div class="contact-me">
-                        <h2 class="contact-heading">Contact</h2>
+                        <h2 class="contact-heading" data-i18n="contact-heading">Contact</h2>
                         <p class="location">Tehran, Iran</p>
                         <a class="email" href="mailto:rojinrhy@gmail.com">rojinrhy@gmail.com</a>
                         <a class="phone-number" href="tel:+989126117155">+98 912 611 7155</a>
@@ -128,13 +136,13 @@
 
                         <!-- EDUCATION -->
                         <div class="education">
-                            <h1 class="education-heading">Education</h1>
+                            <h1 class="education-heading" data-i18n="education-heading">Education</h1>
 
                             <div class="timeline">
                                 <!-- EDUCATION ITEMS -->
                                 <div class="item">
                                     <p class="year"><span class="year-star" aria-hidden="true">✦</span> 2025</p>
-                            <p class="desc">
+                            <p class="desc" data-i18n="edu-2025">
                                 Accepted in the cybersecurity program at
                                 <a href="https://www.unipd.it/en">UniPD</a>
                             </p>
@@ -142,7 +150,7 @@
 
                                 <div class="item">
                                     <p class="year"><span class="year-star" aria-hidden="true">✦</span> 2020-2024</p>
-                            <p class="desc">
+                            <p class="desc" data-i18n="edu-2020">
                                 Studied computer science at
                                 <a href="https://srb.iau.ir/en">IAU Science and Research Branch</a><br>
                                 Graduated with a GPA 17.8
@@ -151,7 +159,7 @@
 
                                 <div class="item">
                                     <p class="year"><span class="year-star" aria-hidden="true">✦</span> 2022</p>
-                                    <p class="desc">
+                                    <p class="desc" data-i18n="edu-2022">
                                         Accepted in the computer engineering program at 
                                         <a href="https://www.concordia.ca/">Concordia University</a>
                                     </p>
@@ -162,26 +170,26 @@
 
                         <!-- EXPERIENCE -->
                         <div class="experience">
-                            <h2 class="experience-heading">Experience</h2>
+                            <h2 class="experience-heading" data-i18n="experience-heading">Experience</h2>
 
                             <div class="ex-timeline">
 
                                 <!-- EXPERIENCE ITEMS -->
                                 <div class="item">
                                     <p class="year"><span class="year-star" aria-hidden="true">✦</span> 2026</p>
-                                    <p class="desc">Finished FreeCodeCamp Front-end Development Course<br>
+                                    <p class="desc" data-i18n="exp-2026">Finished <a class="freecodecamp" href="https://www.freecodecamp.org/learn">FreeCodeCamp</a> Front-end Development Course<br>
                                     Finished Google Certificate Digital Marketing Course
                                     </p>
                                 </div>
 
                                 <div class="item">
                                     <p class="year"><span class="year-star" aria-hidden="true">✦</span> 2024-today</p>
-                                    <p class="desc">Working as an online English tutor</p>
+                                    <p class="desc" data-i18n="exp-2024">Working as an online English tutor</p>
                                 </div>
 
                                 <div class="item">
                                     <p class="year"><span class="year-star" aria-hidden="true">✦</span> 2023</p>
-                                    <p class="desc">Worked as an Android developer at HashStudio Co.</p>
+                                    <p class="desc" data-i18n="exp-2023">Worked as an Android developer at HashStudio Co.</p>
                                 </div>
                             </div>
 
@@ -199,11 +207,11 @@
                     <div class="resume-right">
 
                         <!-- SKILLS -->
-                        <h3 class="skill-heading">Technical skills</h3>
+                        <h3 class="skill-heading" data-i18n="skill-heading">Technical skills</h3>
                         <div class="skill">
                                 
                             <div class="coding">
-                                <h4 class="coding-heading">Coding skills</h4>
+                                <h4 class="coding-heading" data-i18n="coding-heading">Coding skills</h4>
                                 <ul class="skills coding-skills">
                                     <li><span class="skill-icon" style="mask-image: url(images/html5.svg); -webkit-mask-image: url(images/html5.svg);" role="img" aria-label="HTML5"></span></li>
                                     <li><span class="skill-icon" style="mask-image: url(images/css.svg); -webkit-mask-image: url(images/css.svg);" role="img" aria-label="CSS"></span></li>
@@ -214,7 +222,7 @@
                             </div>
 
                             <div class="general">
-                                <h4 class="general-heading">General skills</h4>
+                                <h4 class="general-heading" data-i18n="general-heading">General skills</h4>
                                 <ul class=" skills general-skills">
                                     <li><span class="skill-icon" style="mask-image: url(images/java.svg); -webkit-mask-image: url(images/java.svg);" role="img" aria-label="HTML5"></span></li>
                                     <li><span class="skill-icon" style="mask-image: url(images/git.svg); -webkit-mask-image: url(images/git.svg);" role="img" aria-label="CSS"></span></li>
@@ -248,19 +256,19 @@
                 <div class="aboutme-left">
 
                     <!-- LANGUAGES -->
-                    <h1 class="language-heading">Languages</h1>
+                    <h1 class="language-heading" data-i18n="language-heading">Languages</h1>
                     <div class="languages">
                         <div class="english">
-                            <h2 class="lang-name">English</h2>
-                            <a class="lang-level" href="files/IELTS.pdf" target="_blank" rel="noopener">Fluent - C1</a>
+                            <h2 class="lang-name" data-i18n="lang-english">English</h2>
+                            <a class="lang-level" href="files/IELTS.pdf" target="_blank" rel="noopener" data-i18n="lang-level-en">Fluent - C1</a>
                         </div>
                         <div class="italian">
-                            <h2 class="lang-name">Italian</h2>
-                            <a class="lang-level" href="files/ITALIAN.pdf" target="_blank" rel="noopener">B1</a>
+                            <h2 class="lang-name" data-i18n="lang-italian">Italian</h2>
+                            <a class="lang-level" href="files/ITALIAN.pdf" target="_blank" rel="noopener" data-i18n="lang-level-it">B1</a>
                         </div>
                         <div class="persian">
-                            <h2 class="lang-name">Persian</h2>
-                            <p class="lang-level">Native</p>
+                            <h2 class="lang-name" data-i18n="lang-persian-name">Persian</h2>
+                            <p class="lang-level" data-i18n="lang-level-fa">Native</p>
                         </div>
                     </div>
 
@@ -269,45 +277,45 @@
 
                     <!-- ACTIVITIES -->
                     <div class="activity">
-                        <h3 class="activity-heading">Activities</h3>
+                        <h3 class="activity-heading" data-i18n="activity-heading">Activities</h3>
                         <div class="timeline-act">
 
                             <div class="item-act">
                                 <p class="year-act"><span class="year-star-act" aria-hidden="true">✦</span> 2026</p>
-                                <p class="desc-act">FreeCodeCamp Front-end Development Course<br>
+                                <p class="desc-act" data-i18n="act-2026">FreeCodeCamp Front-end Development Course<br>
                                 <a class="desc-act" href="images/Digital-Marketing-1-English.png" target="_blank" rel="noopener">Google Digital Marketing Course</a>
                                 </p>
                             </div>
 
                             <div class="item-act">
                                 <p class="year-act"><span class="year-star-act" aria-hidden="true">✦</span> 2025</p>
-                                <a class="desc-act" href="files/Admission Letter_ENG_Padua.pdf" target="_blank" rel="noopener">Padua Admission</a>
+                                <a class="desc-act" href="files/Admission Letter_ENG_Padua.pdf" target="_blank" rel="noopener"data-i18n="act-2025">Padua Admission</a>
                             </div>
 
                             <div class="item-act">
                                 <p class="year-act"><span class="year-star-act" aria-hidden="true">✦</span> 2022</p>
-                                <a class="desc-act">Android Development</a>
+                                <p class="desc-act" data-i18n="act-2022a">Android Development</p>
                             </div>
 
                             <div class="item-act">
                                 <p class="year-act"><span class="year-star-act" aria-hidden="true">✦</span> 2022</p>
-                                <a class="desc-act" href="files/Admission_Letter_ENG_Concordia.pdf" target="_blank" rel="noopener">Concordia Admission</a>
+                                <a class="desc-act" href="files/Admission_Letter_ENG_Concordia.pdf" target="_blank" rel="noopener" data-i18n="act-2022b">Concordia Admission</a>
                             </div>
 
                             <div class="item-act">
                                 <p class="year-act"><span class="year-star-act" aria-hidden="true">✦</span> 2020</p>
-                                <a class="desc-act" href="images/CS50x-Certificate.png" target="_blank" rel="noopener">CS50 Course</a>
+                                <a class="desc-act" href="images/CS50x-Certificate.png" target="_blank" rel="noopener" data-i18n="act-2020">CS50 Course</a>
                             </div>
 
                         </div>
                     </div>
                     
                     <!-- PROJECTS -->
-                    <h4 class="project-heading">Projects</h4>
+                    <h4 class="project-heading" data-i18n="project-heading">Projects</h4>
                     <div class="projects">
-                        <a class="project"><img class="project-icon" src="images/portfolio.svg" /> Portfolio</a>
-                        <a class="project" href="images/Digital-Marketing-1-English.png" target="_blank" rel="noopener"><img class="project-icon" src="images/marketing.svg" /> Marketing</a>
-                        <a class="project"><img class="project-icon" src="images/calculator.svg" /> Calculator</a>
+                        <a class="project"><img class="project-icon" src="images/portfolio.svg" /> <span data-i18n="project-portfolio-text">Portfolio</span></a>
+                        <a class="project" href="images/Digital-Marketing-1-English.png" target="_blank" rel="noopener"><img class="project-icon" src="images/marketing.svg" /> <span data-i18n="project-marketing-text">Marketing</span></a>
+                        <a class="project"><img class="project-icon" src="images/calculator.svg" /> <span data-i18n="project-calculator-text">Calculator</span></a>
                     </div>
                 </div>
 

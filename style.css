@@ -57,6 +57,47 @@ body {
     color: #dba1a2;
     text-decoration: none;
 }
+
+/* ---------- LANGUAGE TOGGLE BUTTON ---------- */
+.lang-toggle-wrapper {
+    margin-right: 20px;
+}
+
+.lang-toggle {
+    width: 52px;
+    height: 26px;
+    padding: 3px;
+    border: none;
+    border-radius: 50px;
+    background-color: #b5b5b5;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+}
+
+.lang-toggle-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.lang-toggle[aria-checked="true"] {
+    background-color: #dba1a2;
+}
+
+.lang-toggle[aria-checked="true"] .lang-toggle-circle {
+    transform: translateX(26px);
+}
+
+.lang-toggle:focus-visible {
+    outline: 2px solid #eee6d3;
+    outline-offset: 2px;
+}
  
 .name {
     color: #dba1a2;
@@ -175,9 +216,6 @@ body {
 
 /* ---------- MOBILE OVERRIDE FOR SCREEN SIZES < 700px ---------- */
 @media (max-width: 700px) {
-    /* Let the section grow to fit its stacked content instead of forcing
-       a fixed 100vh — that fixed height was squishing the circle into an
-       oval and pushing overflow into the Contact section below. */
     #hero {
         height: auto;
         min-height: 0;
@@ -193,6 +231,24 @@ body {
         padding: 24px 20px 0;
         height: auto;
     }
+
+    .lang-toggle-wrapper {
+    margin-right: 12px;
+}
+
+.lang-toggle {
+    width: 44px;
+    height: 22px;
+}
+
+.lang-toggle-circle {
+    width: 16px;
+    height: 16px;
+}
+
+.lang-toggle[aria-checked="true"] .lang-toggle-circle {
+    transform: translateX(22px);
+}
  
     .hero-image,
     .job-title,
@@ -601,6 +657,11 @@ body {
     font-family: 'Bebas Neue', sans-serif;
     margin: clamp(24px, 5vw, 50px) 0;
 }
+
+.item a.freecodecamp {
+    list-style: none;
+    color: #6e865b;
+}
  
 .tags {
     display: grid;
@@ -819,8 +880,8 @@ body {
     margin: 0;
 }
  
-.desc-act {
-    list-style: none;
+.item-act a {
+    text-decoration: underline;
     color: #6e865b;
 }
  
