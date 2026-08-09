@@ -73,7 +73,7 @@ const translations = {
         "act-2022b": "پذیرش دانشگاه کنکوردیا",
         "act-2020": "CS50 دوره",
         "project-heading": "پروژه‌ها",
-        "project-portfolio-text": "نمونه‌کار",
+        "project-portfolio-text": "پورتفولیو",
         "project-marketing-text": "بازاریابی",
         "project-calculator-text": "ماشین‌حساب"
     }
